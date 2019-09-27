@@ -13,7 +13,7 @@
       </article>
       <poster/>
       <cronograma/>
-      <noticias/>
+      <!-- <noticias/> -->
       <enlaces/>
       <p_footer/>
 
@@ -57,6 +57,7 @@ export default {
     }
      .imagenPrincipal{
       width: 100%;
+      height: auto;
       padding: 1em;
     }
 </style>

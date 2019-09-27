@@ -1,8 +1,8 @@
 <template>
    
-    <footer class="container p-0 tamano">
-        <div class="row p-0">
-            <div class="col-md-6">
+    <footer class="container p-0 ">
+        <div class="row p-0 m-0 foot">
+            <div class="p-2">
                     <a href="http://www.Instagram.com/delfasport" target="_blank" rel="noopener noreferrer">
                         <img src="@/assets/img/h_instagram.png" alt="instagram">
                     </a>
@@ -16,8 +16,8 @@
                         <img src="@/assets/img/h_youtube.png" alt="youtube">
                     </a>
             </div>
-            <div class="col-md-6 text-right">
-            <img src="@/assets/img/logoCabecera.png" alt="Logo de delfasport" class="logo">
+            <div class="p-2" >
+                    <img src="@/assets/img/logoCabecera.png" alt="Logo de delfasport" class="logo">
             </div>
         </div>
         <div class="row pie p-0 m-0">
@@ -40,7 +40,7 @@ export default {
         background-color: #34312c;
         height: auto;
         /* justify-content: flex-end; */
-        padding: 0 2em;
+        /* padding: 0 2em; */
         
     }
     footer a img {
@@ -48,18 +48,21 @@ export default {
         border: 5px;
         margin: 1.5em .5em;
     }
-    div {
-       padding: 1em 2em;
-       /* flex-wrap: wrap; */
-    }
 
-    .y {
-        margin: auto .5em;
-    }
 
     div a:focus img {
         border-radius: 5px;
         box-shadow: 0 0 1em #f58634;
+    }
+
+    .iconos {
+       justify-content: space-between
+    }
+
+    .foot {
+        padding: 0;
+        justify-content: space-between;
+        text-align: center;
     }
 
     .logo {
