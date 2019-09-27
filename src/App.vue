@@ -1,31 +1,127 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <main>
+        <header class="container">
+            <div class="row">
+                <div class="col-md-6 izquierda">
+                      <!-- <h1 style="opacity:0" >delfasport</h1> -->
+                      <img class="logo" src="@/assets/img/logoCabecera.png" alt="instagram">
+                </div>
+                <div class="col-md-6 derecha">
+                      <a href="http://www.Instagram.com/delfasport" target="_blank" rel="noopener noreferrer">
+                          <img src="@/assets/img/h_instagram.png" alt="instagram">
+                      </a>
+                      <a href="http://www.facebook.com/delfasport" target="_blank" rel="noopener noreferrer">
+                          <img src="@/assets/img/h_facebook.png" alt="facebook">
+                      </a>                            
+                      <a href="http://twitter.com/delfasport" target="_blank" rel="noopener noreferrer">
+                          <img src="@/assets/img/h_twitter.png" alt="twitter">
+                      </a>                            
+                      <a href="http://youtube.com/delfasoft" target="_blank" rel="noopener noreferrer">
+                          <img src="@/assets/img/h_youtube.png" alt="youtube">
+                      </a>
+                </div>
+            </div>
+        </header>
+        <div class="container p-0">
+
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <div class="container">
+                
+                <div class="row"> 
+                  <ul class="navbar-nav ml-auto col-sm-12 justify-content-center p-0 ">
+                      <li class="nav-item">
+                          <a class="nav-link" href="https://www.delfasport.com/#/">INICIO</a>
+                      </li>
+                      <li class="nav-item">
+                          <router-link class="nav-link" to="/" exact>CAMPEONATO DE JIU-JITSU</router-link>
+                      </li>
+                     
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </nav>
+ 
+        </div>
     <router-view/>
-  </div>
+
+    </main>
+
 </template>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+    header {
+        background-color: #fff;
+        height: 80px;
+        justify-content: flex-end;
+        padding: 0 2em;
+    }
+    header a img {
+        width: 30px;
+        border: 5px;
+        margin: 1.5em .5em;
+    }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    .derecha {
+      justify-items: right;
+      text-align: right;
+    }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+    .isquierda {
+      text-align: left;
+    }
+
+    .logo {
+        height: 40px;
+        border: 5px;
+        margin: 1.5em .5em;
+    }
+
+    .navbar{
+        color: #fff;
+    }
+    nav {
+        background-color:  #34312c;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .navlink:hover{
+        cursor:pointer;
+        color: #000;
+        background-color: white;
+        
+    }
+
+    .router-link-active{
+        background-color: #F58634; 
+        font-weight: bold;
+        
+    }
+    .navbar-toggler{
+    color: #fff;
+    }
+
+    @media only screen and (min-width: 700px) {
+    .derecha{
+        display:inline;
+    }
+    
+
+ }
+ 
+ @media only screen and (max-width: 700px) {
+    .derecha{
+         display:none;
+    }
+
+  }
+
+
 </style>
