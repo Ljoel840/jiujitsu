@@ -9,8 +9,8 @@
                       <img class="imagenPrincipal" src="@/assets/img/jiujitsu_atletas.png" alt="ATLETAS JIUJITSU">
                   </div>
             </div>
-            
       </article>
+      
       <poster/>
       <cronograma/>
       <!-- <noticias/> -->
@@ -23,8 +23,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 import p_footer from '@/components/p_footer.vue'
 import poster from '@/components/poster.vue'
 import cronograma from '@/components/cronograma.vue'

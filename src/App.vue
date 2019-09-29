@@ -38,7 +38,7 @@
                           <a class="nav-link" href="https://www.delfasport.com/#/">INICIO</a>
                       </li>
                       <li class="nav-item">
-                          <router-link class="nav-link" to="/" exact>CAMPEONATO DE JIU-JITSU</router-link>
+                          <router-link class="nav-link" to="./" exact>CAMPEONATO DE JIU-JITSU</router-link>
                       </li>
                      
                   </ul>

@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td class="hora">20:30 a 22:30</td>
-                            <td class="descripcion">Miting Tecnico (Sorteo de series)</td>
+                            <td class="descripcion">Meeting Técnico (Sorteo de series)</td>
                         </tr>
                     </table>
                 </div>
@@ -109,10 +109,6 @@
                     </table>
                 </div>
                 <br>
-
-
-
-
 
 
             </div>

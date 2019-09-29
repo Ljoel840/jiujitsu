@@ -28,11 +28,9 @@
             </div>
         </div>
         <br>
-
-
-
     </div>
 </template>
+
 <script>
 export default {
     name: 'enlaces'
