@@ -1,9 +1,8 @@
 <template>
-    <main>
+    <div id="app">
         <header class="container">
             <div class="row">
                 <div class="col-md-6 izquierda">
-                      <!-- <h1 style="opacity:0" >delfasport</h1> -->
                       <img class="logo" src="@/assets/img/logoCabecera.png" alt="instagram">
                 </div>
                 <div class="col-md-6 derecha">
@@ -38,7 +37,7 @@
                           <a class="nav-link" href="https://www.delfasport.com/#/">INICIO</a>
                       </li>
                       <li class="nav-item">
-                          <router-link class="nav-link" to="./" exact>CAMPEONATO DE JIU-JITSU</router-link>
+                          <router-link class="nav-link" to="/" exact>CAMPEONATO DE JIU-JITSU</router-link>
                       </li>
                      
                   </ul>
@@ -50,11 +49,11 @@
         </div>
     <router-view/>
 
-    </main>
+    </div>
 
 </template>
 
-<style>
+<style scoped>
     header {
         background-color: #fff;
         height: 80px;
