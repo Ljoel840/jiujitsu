@@ -1,13 +1,14 @@
 <template>
     <div class="container noticias">
-        <h1>NOTICIAS</h1>
-        <div class="row">
+        <h1 v-if="noti">NOTICIAS</h1>
+        <div class="row" v-if="noti">
             <div class="col-md-4" v-for="not in noti" :key="not.id">
                 <div class="row noticia">
-                    <div class="contenedorTitulo"><h4  class="tituloNoticia"> {{not.titulo}} </h4> </div>
-                    <img class="fotoNoticia" :src="not.src" alt="foto noticia">
-                    <p class="textoNoticia">{{not.noticia}}</p>
-                    </div>
+                    <div class="contenedorTitulo"><h4 class="tituloNoticia"> {{not.titulo}} </h4> </div>
+                    <img class="fotoNoticia" v-if="not.imagen.activo"  :src="not.imagen.url" alt="foto noticia">
+                    <p class="textoNoticia" v-if="not.parrafos[0]">{{not.parrafos[0].texto}}</p>
+                    <p class="textoNoticia" v-if="not.parrafos[1]">{{not.parrafos[1].texto}}</p>
+                </div>
             </div>
 
         </div>
@@ -16,38 +17,35 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name: 'noticias',
     data () {
         return {
-            noti : [
-                {
-                    titulo : 'Titulo Noticia 1',
-                    src : require ('@/assets/img/foto_ejemplo.jpg'),
-                    noticia : 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, volutpat dui eu integer sapien vivamus commodo, tortor faucibus nisl justo id praesent nisi nibh, mollis facilisis eget torquent nam taciti. Tincidunt lobortis morbi praesent ultrices scelerisque ac, pharetra aenean quam sociosqu fames condimentum, eget accumsan laoreet tristique parturient. Lobortis pellentesque odio justo fusce malesuada dapibus ridiculus a aptent risus, fames erat ullamcorper leo cum suspendisse placerat nam commodo morbi convallis, mollis blandit ultrices scelerisque rhoncus nascetur est molestie condimentum.'
-                },
-                {
-                   titulo : 'Titulo Noticia 2',
-                    src : require ('@/assets/img/foto_ejemplo.jpg'),
-                    noticia : 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, volutpat dui eu integer sapien vivamus commodo, tortor faucibus nisl justo id praesent nisi nibh, mollis facilisis eget torquent nam taciti. Tincidunt lobortis morbi praesent ultrices scelerisque ac, pharetra aenean quam sociosqu fames condimentum, eget accumsan laoreet tristique parturient. Lobortis pellentesque odio justo fusce malesuada dapibus ridiculus a aptent risus, fames erat ullamcorper leo cum suspendisse placerat nam commodo morbi convallis, mollis blandit ultrices scelerisque rhoncus nascetur est molestie condimentum.'
-                },
-                {
-                    titulo : 'Titulo Noticia 3',
-                    src : require ('@/assets/img/foto_ejemplo.jpg'),
-                    noticia : 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, volutpat dui eu integer sapien vivamus commodo, tortor faucibus nisl justo id praesent nisi nibh, mollis facilisis eget torquent nam taciti. Tincidunt lobortis morbi praesent ultrices scelerisque ac, pharetra aenean quam sociosqu fames condimentum, eget accumsan laoreet tristique parturient. Lobortis pellentesque odio justo fusce malesuada dapibus ridiculus a aptent risus, fames erat ullamcorper leo cum suspendisse placerat nam commodo morbi convallis, mollis blandit ultrices scelerisque rhoncus nascetur est molestie condimentum.'
-                },
-                {
-                    titulo : 'Titulo Noticia 4',
-                    src : require ('@/assets/img/foto_ejemplo.jpg'),
-                    noticia : 'Lorem ipsum dolor sit amet consectetur adipiscing elit cras, volutpat dui eu integer sapien vivamus commodo, tortor faucibus nisl justo id praesent nisi nibh, mollis facilisis eget torquent nam taciti. Tincidunt lobortis morbi praesent ultrices scelerisque ac, pharetra aenean quam sociosqu fames condimentum, eget accumsan laoreet tristique parturient. Lobortis pellentesque odio justo fusce malesuada dapibus ridiculus a aptent risus, fames erat ullamcorper leo cum suspendisse placerat nam commodo morbi convallis, mollis blandit ultrices scelerisque rhoncus nascetur est molestie condimentum.'
-                },
-
-
-
-            ],
-            conta:0,
-           
+            noti:'',
         }
+    },
+    methods: {
+  
+        async obtenerDatos(){
+            console.log(axios);
+            let datos = await axios.post('https://apps.delfasoft.com/delfawebs/rest/dfs60024', {
+                proyectoEnc: 'jiujitsu',
+                pagina: '/'
+            })
+            .then (response=>{
+                console.log(response.data.frontBlogs);
+                this.noti = response.data.frontBlogs;
+            })
+            .catch(error=>{
+                console.log(error);
+                this.noti = '';
+            })
+            
+        }
+    },
+    created(){
+        this.obtenerDatos()
     }
 }
 </script>

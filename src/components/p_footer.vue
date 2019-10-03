@@ -4,16 +4,16 @@
         <div class="row p-0 m-0 foot">
             <div class="p-2">
                     <a href="http://www.Instagram.com/delfasport" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/img/h_instagram.png" alt="instagram">
+                        <img src="@/assets/img/h_instagram.png" alt="instagram" class="iconos">
                     </a>
                     <a href="http://www.facebook.com/delfasport" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/img/h_facebook.png" alt="facebook">
+                        <img src="@/assets/img/h_facebook.png" alt="facebook" class="iconos">
                     </a>                            
                     <a href="http://twitter.com/delfasport" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/img/h_twitter.png" alt="twitter">
+                        <img src="@/assets/img/h_twitter.png" alt="twitter" class="iconos">
                     </a>                            
                     <a href="http://youtube.com/delfasoft" target="_blank" rel="noopener noreferrer">
-                        <img src="@/assets/img/h_youtube.png" alt="youtube">
+                        <img src="@/assets/img/h_youtube.png" alt="youtube" class="iconos">
                     </a>
             </div>
             <div class="p-2" >
@@ -56,7 +56,8 @@ export default {
     }
 
     .iconos {
-       justify-content: space-between
+       justify-content: space-between;
+       width: 40px;
     }
 
     .foot {
@@ -67,6 +68,7 @@ export default {
 
     .logo {
         margin: 2em .5em 2em auto;
+        width: 200px;
     }
 
     .pie {

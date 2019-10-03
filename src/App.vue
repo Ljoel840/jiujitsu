@@ -22,30 +22,26 @@
             </div>
         </header>
         <div class="container p-0">
-
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <div class="container">
-                
-                <div class="row"> 
-                  <ul class="navbar-nav ml-auto col-sm-12 justify-content-center p-0 ">
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarResponsive">
+                  <ul class="navbar-nav">
                       <li class="nav-item">
                           <a class="nav-link" href="https://www.delfasport.com/#/">INICIO</a>
                       </li>
                       <li class="nav-item">
-                          <router-link class="nav-link" to="/" exact>CAMPEONATO DE JIU-JITSU</router-link>
+                          <router-link class="nav-link" to="/" exact>CAMPEONATO DE JIU-JITSU </router-link>
                       </li>
-                     
                   </ul>
-                </div>
-              </div>
             </div>
         </nav>
  
+
+
+
+  
         </div>
     <router-view/>
 
@@ -83,12 +79,14 @@
 
     .navbar{
         color: #fff;
+        
     }
     nav {
         background-color:  #34312c;
         display: flex;
         justify-content: center;
         color: #fff;
+        font-family: sans-serif;
     }
 
     .navlink:hover{
@@ -105,9 +103,15 @@
     }
     .navbar-toggler{
     color: #fff;
+   
     }
 
-    @media only screen and (min-width: 700px) {
+ 
+   
+
+
+
+    @media only screen and (min-width: 765px) {
     .derecha{
         display:inline;
     }
@@ -115,9 +119,13 @@
 
  }
  
- @media only screen and (max-width: 700px) {
+ @media only screen and (max-width: 766px) {
     .derecha{
          display:none;
+    }
+    nav {
+        justify-content: left;
+      
     }
 
   }

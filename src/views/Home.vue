@@ -13,7 +13,7 @@
       
       <poster/>
       <cronograma/>
-      <!-- <noticias/> -->
+      <noticias/>
       <enlaces/>
       <p_footer/>
 
