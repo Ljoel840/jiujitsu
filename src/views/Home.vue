@@ -10,8 +10,8 @@
                   </div>
             </div>
       </article>
-      
       <poster/>
+      <p_video/>
       <cronograma/>
       <noticias/>
       <enlaces/>
@@ -28,6 +28,7 @@ import poster from '@/components/poster.vue'
 import cronograma from '@/components/cronograma.vue'
 import noticias from '@/components/noticias.vue'
 import enlaces from '@/components/enlaces.vue'
+import p_video from '@/components/p_video.vue'
 export default {
   name: 'home',
   components: {
@@ -35,7 +36,9 @@ export default {
     cronograma,
     noticias,
     enlaces,
-    p_footer
+    p_footer,
+    p_video
+
   }
 }
 </script>
